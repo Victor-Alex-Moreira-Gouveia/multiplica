@@ -4,7 +4,7 @@ const userInput = document.getElementById('userInput');
 const typingIndicator = document.getElementById('typingIndicator');
 
 // URL do seu Webhook (ajustada para o link fornecido)
-const N8N_WEBHOOK_URL = "https://agentes-n8n.cb16s5.easypanel.host/webhook/mensagens";
+const N8N_WEBHOOK_URL = "https://agentes-n8n.cb16s5.easypanel.host/webhook/f0a13c97-f520-44c9-a76e-547e5c883a38";
 
 // FUNÇÃO DE OUTPUT (Mantendo sua estrutura original)
 function appendMessage(content, type) {
