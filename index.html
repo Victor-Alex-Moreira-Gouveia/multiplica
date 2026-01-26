@@ -3,43 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Portal de Atendimento | Grupo Multiplica</title>
-    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-<body>
 
+<body>
+    
     <nav class="navbar">
         <div class="logo-area">MULTI<span>PLICA</span></div>
         <div style="font-size: 0.8rem; opacity: 0.8;">INVESTIMENTOS & SOLUÇÕES</div>
     </nav>
 
-    <div class="main-content">
-        <aside class="sidebar">
-            <h3 style="color: var(--multiplica-blue)">IA de Atendimento</h3>
-            <p style="font-size: 0.9rem; color: #64748b;">Acesso direto aos produtos do Grupo Multiplica: FIDCs, Crédito Estruturado e Gestão de Recursos.</p>
-            <hr style="border: 0; border-top: 1px solid var(--border-color);">
-            <div style="font-size: 0.8rem;">
-                <strong>Status:</strong> <span style="color: #22c55e">● Online</span>
-            </div>
-        </aside>
+    <div class="container">
+        <div class="windows">
 
-        <main class="chat-section">
-            <div class="chat-messages" id="chatBox">
-                <div class="message received">
-                    Bem-vindo ao canal oficial do <strong>Grupo Multiplica</strong>. 
-                    Como posso auxiliar em sua estratégia financeira hoje?
+            <aside>
+                <div style="font-size: 0.8rem;">
+                        <strong>Status:</strong> <span style="color: #22c55e" id="status-online">● Online</span>
+                        <strong>Status:</strong> <span style="color: #ef4444" id="status-offiline">● Offiline</span>
                 </div>
+    
+                <div>
+                    <p>
+                        Acesso direto aos produtos do Grupo Multiplica: FIDCs, Crédito Estruturado e Gestão de Recursos.
+                    </p>
+                </div>
+            </aside>
+
+            <div class="IA_Response">
+                <header>Resposta da IA</header>
+                <div class="chat-container" id="chat-container">
+                    <div class="message ia">
+                        <p>Olá! Como posso ajudar na sua busca hoje?</p>
+                    </div>
+                    
+                    </div>
             </div>
 
-            <div class="input-container">
-                <div id="typingIndicator" class="typing">Aguardando resposta da IA...</div>
-                <form id="chatForm" class="input-wrapper">
-                    <input type="text" id="userInput" placeholder="Digite sua dúvida sobre investimentos..." autocomplete="off">
-                    <button type="submit" class="send-btn">ENVIAR</button>
+            <div class="Form_Linkedln">
+                <header>Formulário de busca do candidato</header>
+                <form action="" method="post" id="search-form">
+
+                    <div>
+                        <label for="cargo">
+                            <strong>Cargo Desejado: </strong>
+                        </label>
+                        <input type="text" name="cargo" id="cargo">
+                    </div>
+
+
+                    <div>
+                        <label for="location">
+                            <strong>Localização: </strong>
+                        </label>
+                        <input type="text" name="location" id="location">
+                    </div>
+
+
+                    <div>
+                        <label for="description">
+                            <strong>Descrição: </strong>
+                        </label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
-        </main>
+        </div>
     </div>
-    </body>
-    <script src="./script.js"></script>
+</body>
+<script src="./script.js"></script>
 </html>
