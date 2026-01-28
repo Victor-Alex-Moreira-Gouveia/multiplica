@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Portal de Atendimento | Grupo Multiplica</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -18,18 +19,34 @@
     <div class="container">
         <div class="windows">
 
-            <aside>
-                <div style="font-size: 0.8rem;">
-                        <strong>Status:</strong> <span style="color: #22c55e" id="status-online">● Online</span>
-                        <strong>Status:</strong> <span style="color: #ef4444" id="status-offiline">● Offiline</span>
-                </div>
-    
+            <aside>   
                 <div>
                     <p>
                         Acesso direto aos produtos do Grupo Multiplica: FIDCs, Crédito Estruturado e Gestão de Recursos.
                     </p>
                 </div>
             </aside>
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+            <div class="Form_Linkedln">
+                <header><i class="fas fa-search"></i> Filtros de Busca</header>
+                <form id="search-form">
+                    <div>
+                        <label for="cargo"><strong>Cargo Desejado</strong></label>
+                        <input type="text" id="cargo" name="cargo" placeholder="Ex: Analista de Investimentos">
+                    </div>
+                    <div>
+                        <label for="location"><strong>Localização</strong></label>
+                        <input type="text" id="location" name="location" placeholder="Ex: São Paulo, SP ou Remoto">
+                    </div>
+                    <div>
+                        <label for="description"><strong>Requisitos / Perfil</strong></label>
+                        <textarea id="description" name="description" placeholder="Descreva as competências..."></textarea>
+                    </div>
+                    <button type="submit"><i class="fas fa-magic"></i> Encontrar Candidatos</button>
+            </form>
+            </div>
 
             <div class="IA_Response">
                 <header>Resposta da IA</header>
@@ -37,39 +54,7 @@
                     <div class="message ia">
                         <p>Olá! Como posso ajudar na sua busca hoje?</p>
                     </div>
-                    
                     </div>
-            </div>
-
-            <div class="Form_Linkedln">
-                <header>Formulário de busca do candidato</header>
-                <form action="" method="post" id="search-form">
-
-                    <div>
-                        <label for="cargo">
-                            <strong>Cargo Desejado: </strong>
-                        </label>
-                        <input type="text" name="cargo" id="cargo">
-                    </div>
-
-
-                    <div>
-                        <label for="location">
-                            <strong>Localização: </strong>
-                        </label>
-                        <input type="text" name="location" id="location">
-                    </div>
-
-
-                    <div>
-                        <label for="description">
-                            <strong>Descrição: </strong>
-                        </label>
-                        <textarea name="description" id="description"></textarea>
-                    </div>
-
-                    <button type="submit">Enviar</button>
-                </form>
             </div>
         </div>
     </div>
